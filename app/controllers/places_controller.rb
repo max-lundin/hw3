@@ -26,7 +26,7 @@ class PlacesController < ApplicationController
 
     @place.save
 
-    redirect_to "places"
+    redirect_to href="/places/"
 
   end
 
