@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
         # find all places rows
         @places = Place.all
-        # render companies/index view
+        # render places/index view
 
 
   end
