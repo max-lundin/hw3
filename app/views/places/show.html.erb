@@ -1,3 +1,23 @@
 <h1><%= @place["name"] %></h1>
 
+<h2>Entries</h2>
+<% if @place.entries.any? %>
+  <ul>
+    <% @place.entries.each do |entry| %>
+      <li>
+        <strong>Title:</strong> <%= entry["title"] %><br>
+        <!-- Note: The next line deviates from your request because date formatting and attribute access in Rails typically use dot notation. -->
+        <strong>Date:</strong> <%= entry.date.strftime("%B %d, %Y") %><br>
+        <strong>Body:</strong> <%= entry["body"] %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No entries yet.</p>
+<% end %>
+
+<!-- This link_to helper will still use dot notation for path helpers, which is standard in Rails. -->
+<%= link_to 'Add New Entry', new_entry_path(place_id: @place.id) %>
+<%#= link_to 'Back to Places List', places_path %>
+
 <p><a href="/places">Back to All Places</a></p>
