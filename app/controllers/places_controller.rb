@@ -5,7 +5,6 @@ class PlacesController < ApplicationController
         @places = Place.all
         # render places/index view
 
-
   end
 
   def show
@@ -26,7 +25,7 @@ class PlacesController < ApplicationController
 
     @place.save
 
-    redirect_to href="/places/"
+    redirect_to "/places/"
 
   end
 
