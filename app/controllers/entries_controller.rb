@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
     @entry.save
 
    
-    redirect_to place_path(@entry.place_id),
+    redirect_to place_path(@entry.place_id)
 
     #notice: "Thanks for sharing your story!"
       
