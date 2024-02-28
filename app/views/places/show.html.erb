@@ -5,7 +5,7 @@
     <% for entry in @place.entries %>
       <li>
         <strong> <%= entry["title"] %></strong> <br> 
-        <small> <%= entry["posted_on"] %> </small> <br>
+        <small> <%= entry["posted_on"] %> </small><br>
         <%= entry["description"] %>
       </li>
     <% end %>

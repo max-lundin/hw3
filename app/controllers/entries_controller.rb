@@ -18,10 +18,9 @@ class EntriesController < ApplicationController
    
     redirect_to place_path(@entry.place_id),
 
-    notice: "Thanks for sharing your story!"
+    #notice: "Thanks for sharing your story!"
       
-      # If the entry doesn't save, you might want to render the new template again
-      # or handle it according to your application's needs.
+
  
     end
   end

@@ -1,10 +1,7 @@
 class PlacesController < ApplicationController
   def index
 
-        # find all places rows
         @places = Place.all
-        # render places/index view
-
   end
 
   def show
